@@ -1,0 +1,52 @@
+﻿@model CursovaHr.Models.VacViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Vaction</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vacname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cust_Id)
+        </th>
+        <th></th>
+    </tr>
+
+    
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => modelItem.Id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => modelItem.Salary)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => modelItem.Vacname)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => modelItem.Category_Id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => modelItem.Cust_Id)
+    </td>
+</tr>
+    
+
+</table>

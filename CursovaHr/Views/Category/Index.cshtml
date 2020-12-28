@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CursovaHr.Models.CategoryViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Category</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+    <form method="get">
+        <div class="form-inline form-group">
+
+            <label class="control-label">Category:</label>
+            <input type="varchar(MAX)" name="name" class="form-control " />
+            <input type="submit" value="Filter" class="btn btn-default" />
+        </div>
+    </form>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Catname)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Catname)
+            </td>
+            <td>
+
+            <td>
+
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+    @Html.ActionLink("look", "Index2")
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        
+    }
+
+</table>

@@ -1,0 +1,54 @@
+﻿@model CursovaHr.Models.ResumeViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Resume</h2>
+
+
+@using (Html.BeginForm("Details", "Resume", FormMethod.Post))
+{ <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Worktime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Resname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Unem_Id)
+            </th>
+            <th></th>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Worktime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Resname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Category_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Unem_Id)
+            </td>
+            
+            
+        </tr>
+
+
+    </table>
+}

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<CursovaHr.Models.VacViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Undeployed </h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vacname)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Salary)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Vacname)
+    </td>
+    <td>
+
+        @Html.ActionLink("Chose", "Chose", new { id = item.Id })
+    </td>
+</tr>
+    }
+
+</table>
